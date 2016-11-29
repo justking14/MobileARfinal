@@ -12,8 +12,6 @@ public class MapTrackableEventHandler : CustomTrackableEventHandler {
 
     public GameObject slider;
 
-    TrackableBehaviour mTrackableBehavior;
-
     // Use this for initialization
     void Start() {
         Init();

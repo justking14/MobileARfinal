@@ -237,4 +237,13 @@
             <resampledTextureWidth>640</resampledTextureWidth>
         </osx>
     </webcam>
+    <webcam deviceName="USB Camera">
+        <windows>
+            <!-- size of the web cam texture requested from Unity -->
+            <requestedTextureWidth>1600</requestedTextureWidth>
+            <requestedTextureHeight>900</requestedTextureHeight>
+            <!-- size of the texture Unity's web cam texture will be rescaled to -->
+            <resampledTextureWidth>1280</resampledTextureWidth>
+        </windows>
+    </webcam>
 </profiles>

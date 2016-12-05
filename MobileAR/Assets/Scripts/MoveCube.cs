@@ -7,6 +7,9 @@ public class MoveCube : MonoBehaviour {
     public float riseTime = 0f;
     public float fallTime = 0f;
 
+    public float topHeight = 0f;
+    public float botHeight = 0f;
+
     public bool incrementally = true;
 
     float startY = 0f;
@@ -21,8 +24,10 @@ public class MoveCube : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position = new Vector3(transform.position.x, startY + yValue, transform.position.z);
-	}
+        //transform.position = new Vector3(transform.position.x, startY + yValue, transform.position.z);
+        transform.position = new Vector3(transform.position.x, yValue, transform.position.z);
+
+    }
 
     public void AdjustY(float newY) {
         Debug.Log(newY);
@@ -45,24 +50,30 @@ public class MoveCube : MonoBehaviour {
         else {
             if (newY > fallTime)
             {
-                yValue = -startY * 5.0f;
+                //yValue = -startY * 5.0f;
+                yValue = botHeight;
             }
             else if (newY <= riseTime - 0.05f && newY > riseTime - 0.1f)
             {
-                yValue = -startY;
+                //yValue = -startY;
+                yValue = 0;
+
             }
-            else if (newY <= riseTime && newY > riseTime - 0.05f)
+            else if (newY <= riseTime && newY > riseTime - 0.05f && newY != 0)
             {
                 yValue = -startY / 2.0f;
+                yValue = topHeight / 2;
 
             }
             else if (newY > riseTime)
             {
                 yValue = 0;
+                yValue = topHeight;
             }
             else
             {
                 yValue = -startY * 5.0f;
+                yValue = botHeight;
             }
 
         }

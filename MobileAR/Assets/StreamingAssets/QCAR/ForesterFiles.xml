@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="schedule" size="0.100000 0.165708" />
+    <ImageTarget name="TrolleyMapTroy" size="0.200000 0.221103" />
+    <ImageTarget name="Film_Poster" size="0.200000 0.261153" />
+    <ImageTarget name="Troy-Rubber-Stamp-Works-Receipt" size="0.200000 0.333333" />
     <ImageTarget name="stones" size="2.000000 1.400000" />
   </Tracking>
 </QCARConfig>

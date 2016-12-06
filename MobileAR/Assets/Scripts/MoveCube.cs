@@ -56,12 +56,12 @@ public class MoveCube : MonoBehaviour {
                 //yValue = -startY * 5.0f;
 				yValue = botHeight; //fully down
             }
-            else if (newY <= riseTime - 0.05f && newY > riseTime - 0.1f)
+            /*else if (newY <= riseTime - 0.05f && newY > riseTime - 0.1f)
             {
                 //yValue = -startY;
 				yValue = topHeight - (sinkValue/2); //a little bit above the ground
 
-            }
+            }*/
             else if (newY <= riseTime && newY > riseTime - 0.05f && newY != 0)
             {
 				yValue = topHeight -sinkValue; //sets the buildings at half the height

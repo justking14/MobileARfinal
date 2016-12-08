@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BrownstoneTrackeableEventHandler : CustomTrackableEventHandler {
+public class PhotoFadeTrackeableEventHandler : CustomTrackableEventHandler {
     public AudioSource a;
     public AudioClip clip;
     public GameObject slider;

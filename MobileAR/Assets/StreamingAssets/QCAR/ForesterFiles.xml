@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-<<<<<<< HEAD
-=======
-    <ImageTarget name="static_qr_code_without_logo" size="0.050000 0.050000" />
->>>>>>> 3dc70a2f499ea9c04e646a08e6aa6245adf636f7
     <ImageTarget name="Letter" size="0.200000 0.086842" />
     <ImageTarget name="front-label-" size="0.100000 0.062617" />
     <ImageTarget name="schedule" size="0.100000 0.165708" />

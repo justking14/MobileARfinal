@@ -12,20 +12,23 @@ public class MoveCube : MonoBehaviour {
 
     public bool incrementally = true;
 
+	float sinkValue;
     float startY = 0f;
 
     // Use this for initialization
     void Start () {
-        
+		sinkValue = 0.2620398f;
+		botHeight = startY - sinkValue;
+        startY = transform.localPosition.y;
+		topHeight = startY;
 
-        startY = transform.position.y;
         AdjustY(0);
 	}
 	
 	// Update is called once per frame
 	void Update () {
         //transform.position = new Vector3(transform.position.x, startY + yValue, transform.position.z);
-        transform.position = new Vector3(transform.position.x, yValue, transform.position.z);
+        transform.localPosition = new Vector3(transform.localPosition.x, yValue, transform.localPosition.z);
 
     }
 
@@ -48,32 +51,29 @@ public class MoveCube : MonoBehaviour {
             }
         }
         else {
-            if (newY > fallTime)
+            if (newY > fallTime)  
             {
                 //yValue = -startY * 5.0f;
-                yValue = botHeight;
+				yValue = botHeight; //fully down
             }
-            else if (newY <= riseTime - 0.05f && newY > riseTime - 0.1f)
+            /*else if (newY <= riseTime - 0.05f && newY > riseTime - 0.1f)
             {
                 //yValue = -startY;
-                yValue = 0;
+				yValue = topHeight - (sinkValue/2); //a little bit above the ground
 
-            }
+            }*/
             else if (newY <= riseTime && newY > riseTime - 0.05f && newY != 0)
             {
-                yValue = -startY / 2.0f;
-                yValue = topHeight / 2;
+				yValue = topHeight -sinkValue; //sets the buildings at half the height
 
             }
             else if (newY > riseTime)
             {
-                yValue = 0;
-                yValue = topHeight;
+                yValue = topHeight; //fully up
             }
             else
             {
-                yValue = -startY * 5.0f;
-                yValue = botHeight;
+                yValue = botHeight; //fully down
             }
 
         }

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="QRWreckingBall" size="0.050000 0.050000" />
+    <ImageTarget name="QRThrowawaySociety" size="0.050000 0.050000" />
+    <ImageTarget name="QRStream" size="0.050000 0.050000" />
+    <ImageTarget name="QRCitiesChange" size="0.050000 0.050000" />
     <ImageTarget name="Letter" size="0.200000 0.086842" />
     <ImageTarget name="front-label-" size="0.100000 0.062617" />
     <ImageTarget name="schedule" size="0.100000 0.165708" />

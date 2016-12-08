@@ -7,7 +7,7 @@ public class SliderLabels : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         GameObject canvas = GameObject.Find("SliderCanvas");
-        Text fifties = Instantiate(decadeText, canvas.transform.position, transform.rotation) as Text;
+        Text fifties = Instantiate(decadeText, canvas.transform.position, transform.rotation).GetComponent<Text>();
         fifties.fontSize = 15;
         fifties.text = "50's";
         fifties.transform.SetParent(canvas.transform, false);
